@@ -129,6 +129,14 @@ printf "$g$b    Installing VLC Media Player $endc$enda" >&2
 printf "\r$c$b    VLC Media Player Installed $endc$enda\n" >&2 ||
 printf "\r$r$b    Error Occured $endc$enda\n" >&2
 
+# Install Deluge 
+printf "$g$b    Installing Deluge $endc$enda" >&2
+{
+    sudo apt install deluge -y
+} &> /dev/null &&
+printf "\r$c$b    Deluge Installed $endc$enda\n" >&2 ||
+printf "\r$r$b    Error Occured $endc$enda\n" >&2
+
 # Install other tools like nano
 sudo apt-get install gdebi -y &> /dev/null
 sudo apt-get install vim -y &> /dev/null
